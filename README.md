@@ -239,7 +239,33 @@ The template uses **Tailwind CSS** for styling. You can customize:
 
 ## 🌐 Deployment
 
-### **Netlify** (Recommended)
+### 🟢 **GitHub Pages** (Recommended - Automated)
+
+**Automated deployment included!** The template comes with a GitHub Actions workflow that automatically deploys to GitHub Pages on every push to `main`.
+
+#### Quick Setup:
+
+1. **Push to GitHub:**
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git push -u origin main
+   ```
+
+2. **Enable GitHub Pages:**
+   - Go to **Settings** → **Pages**
+   - Source: Select **GitHub Actions**
+
+3. **Done!** Your site will be live at:
+   ```
+   https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/
+   ```
+
+**📖 See [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md) for detailed instructions, custom domains, and troubleshooting.**
+
+---
+
+### 🟡 **Netlify**
 
 ```bash
 # Build command
@@ -249,21 +275,26 @@ npm run build
 _site
 ```
 
-### **Vercel**
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start)
+
+### 🔵 **Vercel**
 
 ```bash
 npm install -g vercel
 vercel --prod
 ```
 
-### **GitHub Pages**
+**Settings:**
+- Build Command: `npm run build`
+- Output Directory: `_site`
 
-```bash
-npm run build
-# Upload _site/ folder to your GitHub Pages repository
-```
+### 🟠 **Cloudflare Pages**
 
-### **Custom Server**
+1. Connect GitHub repository
+2. Build command: `npm run build`
+3. Build output directory: `_site`
+
+### 🔴 **Custom Server**
 
 ```bash
 npm run build
