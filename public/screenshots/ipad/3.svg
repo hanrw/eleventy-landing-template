@@ -1,0 +1,39 @@
+<svg width="360" height="480" viewBox="0 0 360 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark Background -->
+  <rect width="360" height="480" fill="#111827"/>
+
+  <!-- Status Bar -->
+  <text x="180" y="32" font-family="-apple-system, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="600">9:41 AM</text>
+
+  <!-- Header -->
+  <rect y="50" width="360" height="70" fill="#1F2937"/>
+  <text x="30" y="92" font-family="-apple-system, sans-serif" font-size="24" fill="white" font-weight="700">Content Library</text>
+
+  <!-- Search Bar -->
+  <rect x="20" y="130" width="320" height="45" rx="12" fill="#1F2937"/>
+  <text x="40" y="157" font-family="-apple-system, sans-serif" font-size="14" fill="#9CA3AF">🔍 Search content...</text>
+
+  <!-- Content Grid -->
+  <rect x="20" y="190" width="155" height="120" rx="12" fill="#1F2937"/>
+  <rect x="30" y="200" width="135" height="80" rx="8" fill="#374151"/>
+  <text x="97.5" y="245" font-family="-apple-system, sans-serif" font-size="24" text-anchor="middle">📄</text>
+  <text x="97.5" y="295" font-family="-apple-system, sans-serif" font-size="12" fill="white" text-anchor="middle">Document 1</text>
+
+  <rect x="185" y="190" width="155" height="120" rx="12" fill="#1F2937"/>
+  <rect x="195" y="200" width="135" height="80" rx="8" fill="#374151"/>
+  <text x="262.5" y="245" font-family="-apple-system, sans-serif" font-size="24" text-anchor="middle">📊</text>
+  <text x="262.5" y="295" font-family="-apple-system, sans-serif" font-size="12" fill="white" text-anchor="middle">Spreadsheet</text>
+
+  <rect x="20" y="320" width="155" height="120" rx="12" fill="#1F2937"/>
+  <rect x="30" y="330" width="135" height="80" rx="8" fill="#374151"/>
+  <text x="97.5" y="375" font-family="-apple-system, sans-serif" font-size="24" text-anchor="middle">🎨</text>
+  <text x="97.5" y="425" font-family="-apple-system, sans-serif" font-size="12" fill="white" text-anchor="middle">Design File</text>
+
+  <rect x="185" y="320" width="155" height="120" rx="12" fill="#1F2937"/>
+  <rect x="195" y="330" width="135" height="80" rx="8" fill="#374151"/>
+  <text x="262.5" y="375" font-family="-apple-system, sans-serif" font-size="24" text-anchor="middle">🎬</text>
+  <text x="262.5" y="425" font-family="-apple-system, sans-serif" font-size="12" fill="white" text-anchor="middle">Video</text>
+
+  <!-- Screenshot Label -->
+  <text x="180" y="30" font-family="-apple-system, sans-serif" font-size="9" fill="white" text-anchor="middle" opacity="0.7">iPad Screenshot 3</text>
+</svg>

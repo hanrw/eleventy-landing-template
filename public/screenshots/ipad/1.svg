@@ -1,0 +1,62 @@
+<svg width="360" height="480" viewBox="0 0 360 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="360" height="480" fill="#F9FAFB"/>
+
+  <!-- Status Bar -->
+  <rect width="360" height="50" fill="#3B82F6"/>
+  <text x="180" y="32" font-family="-apple-system, sans-serif" font-size="14" fill="white" text-anchor="middle" font-weight="600">9:41 AM</text>
+
+  <!-- Split View - Sidebar -->
+  <rect x="10" y="65" width="100" height="400" rx="12" fill="white"/>
+  <text x="60" y="90" font-family="-apple-system, sans-serif" font-size="14" fill="#111827" text-anchor="middle" font-weight="700">Menu</text>
+
+  <rect x="20" y="105" width="80" height="35" rx="8" fill="#DBEAFE"/>
+  <text x="60" y="127" font-family="-apple-system, sans-serif" font-size="12" fill="#3B82F6" text-anchor="middle" font-weight="600">Dashboard</text>
+
+  <rect x="20" y="150" width="80" height="35" rx="8" fill="#F3F4F6"/>
+  <text x="60" y="172" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280" text-anchor="middle">Analytics</text>
+
+  <rect x="20" y="195" width="80" height="35" rx="8" fill="#F3F4F6"/>
+  <text x="60" y="217" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280" text-anchor="middle">Settings</text>
+
+  <rect x="20" y="240" width="80" height="35" rx="8" fill="#F3F4F6"/>
+  <text x="60" y="262" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280" text-anchor="middle">Profile</text>
+
+  <!-- Main Content Area -->
+  <rect x="120" y="65" width="230" height="400" rx="12" fill="white"/>
+  <text x="235" y="95" font-family="-apple-system, sans-serif" font-size="18" fill="#111827" text-anchor="middle" font-weight="700">Dashboard Overview</text>
+
+  <!-- Stats Cards -->
+  <rect x="135" y="115" width="100" height="80" rx="10" fill="#DBEAFE"/>
+  <text x="185" y="142" font-family="-apple-system, sans-serif" font-size="11" fill="#3B82F6" text-anchor="middle">Total Users</text>
+  <text x="185" y="170" font-family="-apple-system, sans-serif" font-size="24" fill="#1E40AF" text-anchor="middle" font-weight="700">2.5K</text>
+
+  <rect x="245" y="115" width="100" height="80" rx="10" fill="#D1FAE5"/>
+  <text x="295" y="142" font-family="-apple-system, sans-serif" font-size="11" fill="#10B981" text-anchor="middle">Active Now</text>
+  <text x="295" y="170" font-family="-apple-system, sans-serif" font-size="24" fill="#047857" text-anchor="middle" font-weight="700">842</text>
+
+  <!-- Chart Area -->
+  <rect x="135" y="210" width="210" height="120" rx="10" fill="#F9FAFB"/>
+  <text x="240" y="235" font-family="-apple-system, sans-serif" font-size="12" fill="#6B7280" text-anchor="middle" font-weight="600">Monthly Growth</text>
+
+  <!-- Simple Bar Chart -->
+  <rect x="155" y="290" width="25" height="25" rx="4" fill="#3B82F6"/>
+  <rect x="190" y="280" width="25" height="35" rx="4" fill="#3B82F6"/>
+  <rect x="225" y="270" width="25" height="45" rx="4" fill="#8B5CF6"/>
+  <rect x="260" y="260" width="25" height="55" rx="4" fill="#8B5CF6"/>
+  <rect x="295" y="275" width="25" height="40" rx="4" fill="#3B82F6"/>
+
+  <!-- Recent Activity -->
+  <rect x="135" y="345" width="210" height="50" rx="8" fill="#F9FAFB"/>
+  <circle cx="150" cy="370" r="8" fill="#10B981"/>
+  <rect x="165" y="363" width="120" height="8" rx="4" fill="#E5E7EB"/>
+  <rect x="165" y="376" width="80" height="6" rx="3" fill="#F3F4F6"/>
+
+  <rect x="135" y="405" width="210" height="50" rx="8" fill="#F9FAFB"/>
+  <circle cx="150" cy="430" r="8" fill="#3B82F6"/>
+  <rect x="165" y="423" width="100" height="8" rx="4" fill="#E5E7EB"/>
+  <rect x="165" y="436" width="90" height="6" rx="3" fill="#F3F4F6"/>
+
+  <!-- Screenshot Label -->
+  <text x="180" y="30" font-family="-apple-system, sans-serif" font-size="9" fill="white" text-anchor="middle" opacity="0.7">iPad Screenshot 1</text>
+</svg>

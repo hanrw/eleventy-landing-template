@@ -7,17 +7,17 @@
 export const screenshots = {
   count: 5,  // Total number of screenshots
   basePath: '/screenshots',  // Base path (public/ contents are copied to root)
-  formats: ['avif', 'webp', 'png'],  // Supported formats in order of preference
+  formats: ['avif', 'webp', 'png', 'svg'],  // Supported formats in order of preference
   iphone: [
-    "/screenshots/iphone/1.png",
-    "/screenshots/iphone/2.png",
-    "/screenshots/iphone/3.png",
-    "/screenshots/iphone/4.png",
-    "/screenshots/iphone/5.png"
+    "/screenshots/iphone/1.svg",
+    "/screenshots/iphone/2.svg",
+    "/screenshots/iphone/3.svg",
+    "/screenshots/iphone/4.svg",
+    "/screenshots/iphone/5.svg"
   ],
   ipad: [
-    "/screenshots/ipad/1.png",
-    "/screenshots/ipad/2.png",
-    "/screenshots/ipad/3.png"
+    "/screenshots/ipad/1.svg",
+    "/screenshots/ipad/2.svg",
+    "/screenshots/ipad/3.svg"
   ]
 };

@@ -116,25 +116,72 @@ export const socialLinks = [
 ];
 ```
 
-### 6️⃣ **Screenshots** (`src/config/screenshots.js`)
+### 6️⃣ **Screenshots** (`src/config/screenshots.js` & `public/screenshots/`)
 
-Configure your app screenshots:
+**Step 1:** Add your screenshot images to `public/screenshots/`:
+
+```
+public/screenshots/
+├── iphone/
+│   ├── 1.png  (Recommended: 260x462px, 9:16 ratio)
+│   ├── 2.png
+│   └── ...
+└── ipad/
+    ├── 1.png  (Recommended: 360x480px, 4:3 ratio)
+    ├── 2.png
+    └── ...
+```
+
+**Step 2:** Configure the paths in `src/config/screenshots.js`:
 
 ```javascript
 export const screenshots = {
-  count: 5,
-  path: '/assets/screenshots',
+  basePath: '/screenshots',
   formats: ['avif', 'webp', 'png'],
   iphone: [
-    "screenshots/iphone/1.png",
+    "/screenshots/iphone/1.png",
+    "/screenshots/iphone/2.png",
     // Add more...
   ],
   ipad: [
-    "screenshots/ipad/1.png",
+    "/screenshots/ipad/1.png",
+    "/screenshots/ipad/2.png",
     // Add more...
   ]
 };
 ```
+
+> 💡 **Tip:** The `public/` directory contents are copied to the root of your site, so `/screenshots/iphone/1.png` maps to `public/screenshots/iphone/1.png`
+
+### 7️⃣ **Updates/Changelog** (`src/config/updates.js`)
+
+Keep users informed about new features and bug fixes:
+
+```javascript
+export const updates = [
+  {
+    version: "1.2.0",
+    build: "24",  // Optional build number
+    date: "2025-01-15",
+    changes: [
+      "Added dark mode support with system preference detection",
+      "Improved performance with lazy loading images",
+      "Fixed iOS 18 navigation bar display issues",
+      "New onboarding experience for first-time users"
+    ]
+  },
+  // Add more updates in reverse chronological order (newest first)
+];
+
+// Optional: Link to full changelog page
+export const changelogUrl = "#";  // Set to your changelog URL or "#" to hide "View all" link
+```
+
+**Tips:**
+- List updates in **reverse chronological order** (newest first)
+- Use clear, user-friendly language
+- Group related changes together
+- Include version number, optional build number, and release date
 
 ## 📁 Project Structure
 
@@ -144,10 +191,11 @@ eleventy-landing-template/
 │   ├── config/              # Centralized configuration
 │   │   ├── appInfo.js       # App information
 │   │   ├── features.js      # Features list
+│   │   ├── screenshots.js   # Screenshot config
+│   │   ├── updates.js       # Updates/changelog
 │   │   ├── reviews.js       # User reviews
 │   │   ├── faq.js          # FAQ items
 │   │   ├── socialLinks.js   # Social media links
-│   │   ├── screenshots.js   # Screenshot config
 │   │   └── index.js        # Config aggregator
 │   ├── 11ty/               # Eleventy source files
 │   │   ├── _data/          # Eleventy data files
@@ -155,10 +203,13 @@ eleventy-landing-template/
 │   │   ├── _layouts/       # Page layouts
 │   │   └── index.njk       # Homepage
 │   └── style.css           # Main stylesheet
-├── public/                 # Static assets
+├── public/                 # Static assets (copied to root)
+│   ├── screenshots/       # App screenshots
+│   │   ├── iphone/       # iPhone screenshots
+│   │   └── ipad/         # iPad screenshots
 │   ├── js/
-│   │   └── theme.js       # Theme toggle script
-│   └── favicon-512.svg    # App icon
+│   │   └── theme.js      # Theme toggle script
+│   └── favicon-512.svg   # App icon
 ├── assets/                # Images, fonts, etc.
 ├── eleventy.config.js     # Eleventy configuration
 ├── tailwind.config.js     # Tailwind configuration
@@ -170,6 +221,8 @@ eleventy-landing-template/
 
 - **Hero Section**: Eye-catching header with app name and CTA buttons
 - **Features Section**: Grid layout showcasing app features
+- **Screenshots Section**: Device previews with iPhone and iPad screenshots
+- **Updates Section**: Changelog with version history and release notes
 - **Reviews Section**: User testimonials with ratings
 - **FAQ Section**: Frequently asked questions
 - **Header**: Sticky navigation with theme toggle
