@@ -8,7 +8,6 @@ export default function(eleventyConfig) {
   });
 
   // Pass through static assets
-  eleventyConfig.addPassthroughCopy({ "assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "public": "." });
 
   // Global site data

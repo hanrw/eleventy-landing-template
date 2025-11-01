@@ -7,10 +7,10 @@
   <meta name="description" content="{{ description or config.description }}">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/{{ config.logo.src }}">
+  <link rel="icon" type="image/svg+xml" href="{{ config.logo.src }}">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
@@ -32,7 +32,7 @@
 
   {% include "footer.njk" %}
 
-  <script src="/js/theme.js"></script>
-  <script src="/js/screenshots.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/screenshots.js"></script>
 </body>
 </html>
