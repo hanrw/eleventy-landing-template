@@ -1,47 +1,72 @@
 <section id="screenshots" class="py-20 px-4">
   <div class="container mx-auto max-w-6xl">
-    <div class="text-center mb-16">
+    <div class="text-center mb-12">
       <h2 class="text-4xl md:text-5xl font-bold mb-4">See It In Action</h2>
       <p class="text-xl text-gray-600 dark:text-gray-400">Beautiful on every device</p>
     </div>
 
-    <div class="flex flex-col lg:flex-row gap-12 items-center justify-center">
+    <!-- Device Toggle -->
+    {% if config.screenshots.iphone and config.screenshots.ipad %}
+    <div class="flex justify-center mb-8">
+      <div class="inline-flex bg-gray-100 dark:bg-gray-800 rounded-xl p-1">
+        <button
+          id="toggle-iphone"
+          class="device-toggle px-6 py-3 rounded-lg font-semibold transition-all duration-200 bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-md"
+          data-device="iphone"
+        >
+          📱 iPhone
+        </button>
+        <button
+          id="toggle-ipad"
+          class="device-toggle px-6 py-3 rounded-lg font-semibold transition-all duration-200 text-gray-600 dark:text-gray-400"
+          data-device="ipad"
+        >
+          📱 iPad
+        </button>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Screenshots Container -->
+    <div class="relative max-w-full overflow-hidden">
       <!-- iPhone Screenshots -->
       {% if config.screenshots.iphone %}
-      <div class="flex-1">
-        <h3 class="text-2xl font-bold text-center mb-6">iPhone</h3>
-        <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide justify-center">
-          {% for screenshot in config.screenshots.iphone %}
-          <div class="flex-shrink-0 w-[260px]">
-            <img
-              src="{{ screenshot }}"
-              alt="iPhone screenshot {{ loop.index }}"
-              class="w-full h-auto rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700"
-              loading="lazy"
-              onerror="this.style.display='none'"
-            />
+      <div id="iphone-screenshots" class="screenshots-container">
+        <div class="flex gap-4 overflow-x-auto pb-4 px-4 md:px-0 scrollbar-hide">
+          <div class="flex gap-4 mx-auto">
+            {% for screenshot in config.screenshots.iphone %}
+            <div class="flex-shrink-0 w-[260px]">
+              <img
+                src="{{ screenshot }}"
+                alt="iPhone screenshot {{ loop.index }}"
+                class="w-full h-auto rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 transition-transform hover:scale-105"
+                loading="lazy"
+                onerror="this.style.display='none'"
+              />
+            </div>
+            {% endfor %}
           </div>
-          {% endfor %}
         </div>
       </div>
       {% endif %}
 
       <!-- iPad Screenshots -->
       {% if config.screenshots.ipad %}
-      <div class="flex-1">
-        <h3 class="text-2xl font-bold text-center mb-6">iPad</h3>
-        <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide justify-center">
-          {% for screenshot in config.screenshots.ipad %}
-          <div class="flex-shrink-0 w-[360px]">
-            <img
-              src="{{ screenshot }}"
-              alt="iPad screenshot {{ loop.index }}"
-              class="w-full h-auto rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700"
-              loading="lazy"
-              onerror="this.style.display='none'"
-            />
+      <div id="ipad-screenshots" class="screenshots-container hidden">
+        <div class="flex gap-4 overflow-x-auto pb-4 px-4 md:px-0 scrollbar-hide">
+          <div class="flex gap-4 mx-auto">
+            {% for screenshot in config.screenshots.ipad %}
+            <div class="flex-shrink-0 w-[360px]">
+              <img
+                src="{{ screenshot }}"
+                alt="iPad screenshot {{ loop.index }}"
+                class="w-full h-auto rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 transition-transform hover:scale-105"
+                loading="lazy"
+                onerror="this.style.display='none'"
+              />
+            </div>
+            {% endfor %}
           </div>
-          {% endfor %}
         </div>
       </div>
       {% endif %}
