@@ -1,0 +1,29 @@
+<section class="pt-32 pb-20 px-4">
+  <div class="container mx-auto max-w-6xl">
+    <div class="text-center">
+      <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 animate-fade-in-up">
+        {{ config.title }}
+      </h1>
+
+      <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto animate-fade-in-up" style="animation-delay: 0.1s;">
+        {{ config.description }}
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style="animation-delay: 0.2s;">
+        {% if config.storeLinks.apple %}
+        <a href="{{ config.storeLinks.apple }}" class="inline-flex items-center px-8 py-4 bg-black dark:bg-white text-white dark:text-black rounded-xl hover:scale-105 transition-transform">
+          <span class="mr-3">📱</span>
+          <span class="font-semibold">Download on App Store</span>
+        </a>
+        {% endif %}
+
+        {% if config.storeLinks.google %}
+        <a href="{{ config.storeLinks.google }}" class="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-xl hover:scale-105 transition-transform">
+          <span class="mr-3">🤖</span>
+          <span class="font-semibold">Get it on Google Play</span>
+        </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
